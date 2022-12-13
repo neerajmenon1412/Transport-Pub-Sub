@@ -1,0 +1,31 @@
+COEN317 Project
+Anagha Rao(W1630583)
+Neeraj Menon(W1650116)
+TransportPubSub: A Publish/Subscribe System
+
+1. Open the project using eclipse. Right click on TransportPubSub -> Run As -> Maven Build to compile the code. Type in ‘clean install’ under Edit Configuration and click on Run.
+
+2. After the BUILD SUCCESS message, go to the servers tab and start the Apache Tomcat server (The following link can be used to create and add server: https://www.vogella.com/tutorials/EclipseWTP/article.html)
+
+3. On your browser, type in http://localhost:8080/TransportPubSub/test.jsp. The test.jsp page should now be visible.
+
+4. Enter a server name and click on submit. You will get an alert saying the server has been created.
+
+5. The broker(server) information can now be viewed upon clicking the ‘Server Info’ button. The server information is stored in the format: <server name> <ip> <port>.
+
+6. Click on server info and the server name, ip and port number should now be visible. Go to the home folder on your system and you should be able to see 3 .txt files: pubsubrelation, serverinfo, subscriberinfo.
+
+7. Create one or more subscribers by typing in a subscriber name and clicking on submit. The subscriberinfo.txt file will now consists of the subscriber information in the format <subscriber name> <ip> <port>.
+
+8. Subscribe the subscriber to a Transport Mode/Route events by typing in the subscriber name and the transport mode or route to subscribe to click on ‘Subscribe’.
+The pubsubrelation.txt file will now contain the topic subscribed to and the subscriber name in the following format: <Transport Mode/Route> <Subscriber Name>.
+
+9. The home folder will also have an html file of the format <subscriber_name>.html. Open the html file. All the messages from the Topics the subscriber subscribed to will appear on this page.
+
+10. Under the Publisher section, type in a transport mode or route (such as “bus” or “route 16” or both) under topic and type in a message under Content. Click on publish. If the subscriber is subscribed to that topic, the message will now appear under the subscriber. 
+
+11. To unsubscribe, go to the Subscribe/Unsubscribe section and fill in the subscriber name and the topic you want to unsubscribe from. Click on unsubscribe. The subscriber will now stop receiving messages from the subscribed topic.
+
+NOTE: Delete all files created: serverinfo.txt, subscriberinfo.txt, pubsubrelation.txt and <subscriber_name(s)>.html before rerunning the code to avoid confusion with previously created servers and subscribers.
+
+
